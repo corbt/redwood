@@ -68,7 +68,9 @@ const expressResponseForLambdaResult = (
   // The AWS lambda docs specify that the response object must be
   // compatible with `JSON.stringify`, but the type definition specifices that
   // it must be a string.
-  if (typeof body === 'string') {
+  if (lambdaResult.isBase64Encoded) {
+    expressResFn.send(Buffer.from(body, 'base64'))
+  } else if (typeof body === 'string') {
     expressResFn.send(body)
   } else {
     expressResFn.json(body)
@@ -91,16 +93,17 @@ export const requestHandler = async (
   // We take the express request object and convert it into a lambda function event.
   const event = lambdaEventForExpressRequest(req)
 
-  const handlerCallback =
-    (expressResFn: Response) =>
-    (error: Error, lambdaResult: APIGatewayProxyResult) => {
-      if (error) {
-        expressResponseForLambdaError(expressResFn, error)
-        return
-      }
-
-      expressResponseForLambdaResult(expressResFn, lambdaResult)
+  const handlerCallback = (expressResFn: Response) => (
+    error: Error,
+    lambdaResult: APIGatewayProxyResult
+  ) => {
+    if (error) {
+      expressResponseForLambdaError(expressResFn, error)
+      return
     }
+
+    expressResponseForLambdaResult(expressResFn, lambdaResult)
+  }
 
   // Execute the lambda function.
   // https://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-handler.html
