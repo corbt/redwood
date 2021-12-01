@@ -1927,16 +1927,17 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@clerk/clerk-js@^1.28.1":
-  version "1.28.1"
-  resolved "https://registry.yarnpkg.com/@clerk/clerk-js/-/clerk-js-1.28.1.tgz#de0304f6b67034f8dfbf69c0dfbf67f6fe5800a8"
-  integrity sha512-gukD5Osxr+0MV7eqp1UrX1CE37wYBX/RFFHs2OKMxeUliYFFMPvu4eZOAXa1VLOovE/RrPcLFuGXPDUYCEh3eQ==
+"@clerk/clerk-js@^2.4.1":
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/@clerk/clerk-js/-/clerk-js-2.4.1.tgz#4c4a74a17f8250aeb409389b7c558a10dd0155f7"
+  integrity sha512-S0WZ/qY5RA/0ruMpP+byk3wVNjYgrchKcETJi0bHDSjRwzydyucZnMQ+k1jC1T68Si935laL6Am/oGzAHLBhSA==
   dependencies:
-    "@clerk/types" "1.8.1"
+    "@clerk/types" "1.17.1"
     "@popperjs/core" "^2.4.4"
+    browser-tabs-lock "^1.2.15"
     classnames "^2.2.6"
-    core-js "3.8.1"
-    date-fns "^2.16.1"
+    core-js "^3.18.3"
+    deepmerge "^4.2.2"
     js-cookie "^2.2.1"
     qs "^6.9.4"
     react "16.13.1"
@@ -1956,10 +1957,10 @@
     lodash "^4.17.21"
     snakecase-keys "^3.2.1"
 
-"@clerk/types@1.8.1", "@clerk/types@^1.8.1":
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/@clerk/types/-/types-1.8.1.tgz#f0a7918d9ccbafd4ba856a95b9558293c3ef4a19"
-  integrity sha512-A6a3sSoCqmtjgGQRBS3EPY3fXXwZGxWR7svdHlu1HgRhZzD7WtPIkyALP6byTPd/77V+b6FMbLl0UrAPVRs5oA==
+"@clerk/types@1.17.1", "@clerk/types@^1.8.1":
+  version "1.17.1"
+  resolved "https://registry.yarnpkg.com/@clerk/types/-/types-1.17.1.tgz#22ffbf07080b0ee56043060d99bcfbf4f687db69"
+  integrity sha512-mKicHEFwpg+EsJK18CHQH7EdZ7qmsX9oXTW8sgpM4tlYuvxNCZCB1jGM6rU8gf1IdeB8cmd5FoSUAlXA0vCBRQ==
 
 "@discoveryjs/json-ext@^0.5.0":
   version "0.5.3"
@@ -6997,10 +6998,10 @@ browser-process-hrtime@^1.0.0:
   resolved "https://registry.yarnpkg.com/browser-process-hrtime/-/browser-process-hrtime-1.0.0.tgz#3c9b4b7d782c8121e56f10106d84c0d0ffc94626"
   integrity sha512-9o5UecI3GhkpM6DrXr69PblIuWxPKk9Y0jHBRhdocZ2y7YECBFCsHm79Pr3OyR2AvjhDkabFJaDJMYRazHgsow==
 
-browser-tabs-lock@^1.2.13:
-  version "1.2.14"
-  resolved "https://registry.yarnpkg.com/browser-tabs-lock/-/browser-tabs-lock-1.2.14.tgz#f4ba30810d20199a1858c102da1f91e339250728"
-  integrity sha512-ssSpCRcvFe4vc098LDnrJOQDfZiG35KhQGB9hthTbwJk5mmUkePwhcMlW61NH3YuIE2Y9uGLqf9yxEBKbaDlaw==
+browser-tabs-lock@^1.2.13, browser-tabs-lock@^1.2.15:
+  version "1.2.15"
+  resolved "https://registry.yarnpkg.com/browser-tabs-lock/-/browser-tabs-lock-1.2.15.tgz#d5012e652e2a0cb4eba471b0a2300c2fa5d92788"
+  integrity sha512-J8K9vdivK0Di+b8SBdE7EZxDr88TnATing7XoLw6+nFkXMQ6sVBh92K3NQvZlZU91AIkFRi0w3sztk5Z+vsswA==
   dependencies:
     lodash ">=4.17.21"
 
@@ -8109,7 +8110,7 @@ core-js-pure@^3.8.1, core-js-pure@^3.8.2:
   resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.15.2.tgz#c8e0874822705f3385d3197af9348f7c9ae2e3ce"
   integrity sha512-D42L7RYh1J2grW8ttxoY1+17Y4wXZeKe7uyplAI3FkNQyI5OgBIAjUfFiTPfL1rs0qLpxaabITNbjKl1Sp82tA==
 
-core-js@3.16.0, core-js@^3.16.0:
+core-js@3.16.0:
   version "3.16.0"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.16.0.tgz#1d46fb33720bc1fa7f90d20431f36a5540858986"
   integrity sha512-5+5VxRFmSf97nM8Jr2wzOwLqRo6zphH2aX+7KsAUONObyzakDNq2G/bgbhinxB4PoV9L3aXQYhiDKyIKWd2c8g==
@@ -8119,15 +8120,10 @@ core-js@3.6.5:
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.6.5.tgz#7395dc273af37fb2e50e9bd3d9fe841285231d1a"
   integrity sha512-vZVEEwZoIsI+vPEuoF9Iqf5H7/M3eeQqWlQnYa8FSKKePuYTf5MWnxb5SDAzCa60b3JBRS5g9b+Dq7b1y/RCrA==
 
-core-js@3.8.1:
-  version "3.8.1"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.8.1.tgz#f51523668ac8a294d1285c3b9db44025fda66d47"
-  integrity sha512-9Id2xHY1W7m8hCl8NkhQn5CufmF/WuR30BTRewvCXc1aZd3kMECwNZ69ndLbekKfakw9Rf2Xyc+QR6E7Gg+obg==
-
-core-js@^3.0.4, core-js@^3.11.0, core-js@^3.6.5, core-js@^3.8.2:
-  version "3.15.2"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.15.2.tgz#740660d2ff55ef34ce664d7e2455119c5bdd3d61"
-  integrity sha512-tKs41J7NJVuaya8DxIOCnl8QuPHx5/ZVbFo1oKgVl1qHFBBrDctzQGtuLjPpRdNTWmKPH6oEvgN/MUID+l485Q==
+core-js@^3.0.4, core-js@^3.11.0, core-js@^3.16.0, core-js@^3.18.3, core-js@^3.6.5, core-js@^3.8.2:
+  version "3.19.2"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.19.2.tgz#ae216d7f4f7e924d9a2e3ff1e4b1940220f9157b"
+  integrity sha512-ciYCResnLIATSsXuXnIOH4CbdfgV+H1Ltg16hJFN7/v6OxqnFr/IFGeLacaZ+fHLAm0TBbXwNK9/DNBzBUrO/g==
 
 core-util-is@~1.0.0:
   version "1.0.2"
